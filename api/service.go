@@ -22,6 +22,8 @@ func (app *Config) twilioSendOtp(phoneNumber string) (string, error) {
 	if err != nil {
 		return "", err
 	}
+
+	fmt.Println("res sid is ", *res.Sid, *res.Status)
 	return *res.Sid, nil
 }
 
